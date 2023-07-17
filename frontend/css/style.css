@@ -1,0 +1,429 @@
+@charset "utf-8";
+
+/*** Fonts Face CSS ***/
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
+
+
+/**** CSS Variables ****/
+
+/** use variables in css property like, background-color: var(--primary-color); */
+/* :root {
+    // --- color variables --- 
+    --primary-color: #f9f9f9;
+    --secondary-color: #fff;
+    --border-color: #e8dede;
+    --text-primary-color: #292323;
+    --text-secondary-color: #ccc;
+    --text-selection-color: #b3d4fc;
+} */
+
+/* -=- Common Element CSS Start -=- */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    background: var(--text-selection-color);
+    text-shadow: none;
+}
+
+::selection {
+    background: var(--text-selection-color);
+    text-shadow: none;
+}
+
+/* html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--primary-color);
+} */
+
+/* img {
+    border: 0px !important;
+    outline: none;
+    width: 100%;
+    max-width: 100%;
+} */
+
+/* ul,
+ol {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    outline: none;
+    text-decoration: none;
+} */
+
+/* .btn:focus,
+.btn.focus,
+.form-control:hover,
+.form-control:focus,
+.form-control:focus:Active {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+} */
+
+/* p {
+    margin: 0px;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--text-primary-color);
+    font-weight: normal;
+} */
+
+/* hr {
+    margin: 1em 0;
+    padding: 0;
+    display: block;
+    border: 0;
+    border-top: 1px solid var(--border-color);
+} */
+
+/* audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+}*/
+
+/* input::placeholder {
+    // Chrome, Firefox, Opera, Safari 10.1+
+    color: var(--text-secondary-color);
+    opacity: 1;
+} */
+
+/* input:-ms-input-placeholder {
+    // Internet Explorer 10-11
+    color: var(--text-secondary-color);
+} */
+
+/* input::-ms-input-placeholder {
+    // Microsoft Edge
+    color: var(--text-secondary-color);
+} */
+
+/* textarea::placeholder {
+    color: var(--text-secondary-color);
+    opacity: 1;
+}
+
+textarea:-ms-input-placeholder {
+    color: var(--text-secondary-color);
+}
+
+textarea::-ms-input-placeholder {
+    color: var(--text-secondary-color);
+} */
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+p,
+a {
+    font-family: 'Roboto', sans-serif;
+} */
+
+/*** Heading CSS ***/
+/* h1,
+.h1 {}
+
+h2,
+.h2 {}
+
+h3,
+.h3 {}
+
+h4,
+.h4 {}
+
+h5,
+.h5 {}
+
+h6,
+.h6 {} */
+
+/* Common Class CSS related to text alignment*/
+/* .text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+} */
+
+/* -=- Header CSS -=- */
+/* header {} */
+
+/* -=- Footer CSS -=- */
+/* footer {} */
+
+/* -=- Main Area CSS -=- */
+/* main {} */
+.transition,
+ul li i:before,
+ul li i:after,
+p {
+    transition: all 0.25s ease-in-out;
+}
+
+.flipIn,
+ul li,
+h1 {
+    animation: flipdown 0.5s ease both;
+}
+
+.no-select,
+h2 {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    perspective: 900;
+    overflow-y: scroll;
+    /* background-color: #dce7eb; */
+    /* font-family: "Titillium Web", sans-serif; */
+    font-family: 'Hind', sans-serif;
+    color: rgba(48, 69, 92, 0.8);
+    background-color: #f9f9f9;
+}
+
+body {
+    min-height: 0;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    margin: 90px 0;
+    transform: translate(-50%, 0);
+    /* box-shadow: 0 10px 0 0 #ff6873 inset; */
+    /* background-color: #fefffa;*/
+    /* background-color: #fff; */
+    /* max-width: 450px; */
+    width: 48rem;
+    padding: 30px;
+}
+
+@media (max-width: 550px) {
+    body {
+        box-sizing: border-box;
+        transform: translate(0, 0);
+        max-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        left: 0;
+    }
+}
+
+h1,
+h2 {
+    color: #4d5974;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-size: 1.17em;
+    line-height: 42px;
+    /* letter-spacing: 3px;
+    font-weight: 100; */
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 300;
+    /* letter-spacing: 1px; */
+    display: block;
+    /* background-color: #fefffa; */
+    margin: 0;
+    cursor: pointer;
+}
+
+p {
+    color: rgba(48, 69, 92, 0.8);
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    max-height: 800px;
+    opacity: 1;
+    transform: translate(0, 0);
+    margin: 0px;
+    margin-top: 14px;
+    z-index: 2;
+}
+
+ul {
+    list-style: none;
+    perspective: 900;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    /* padding-bottom: 4px;
+    padding-top: 18px; */
+    padding: 15px 0;
+    border-top: 2px solid #e8dede;
+
+}
+
+ul li:nth-of-type(1) {
+    animation-delay: 0.5s;
+}
+
+ul li:nth-of-type(2) {
+    animation-delay: 0.75s;
+}
+
+ul li:nth-of-type(3) {
+    animation-delay: 1s;
+}
+
+ul li:last-of-type {
+    padding-bottom: 0;
+}
+
+ul li i {
+    position: absolute;
+    transform: translate(-6px, 0);
+    margin-top: 12px;
+    right: 0;
+}
+
+ul li i:before,
+ul li i:after {
+    content: "";
+    position: absolute;
+    background-color: #4d5974;
+    width: 3px;
+    height: 9px;
+}
+
+ul li i:before {
+    transform: translate(-2px, 0) rotate(45deg);
+}
+
+ul li i:after {
+    transform: translate(2px, 0) rotate(-45deg);
+}
+
+ul li input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+
+ul li input[type=checkbox]:checked~p {
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    transform: translate(0, 50%);
+}
+
+ul li input[type=checkbox]:checked~i:before {
+    transform: translate(2px, 0) rotate(45deg);
+}
+
+ul li input[type=checkbox]:checked~i:after {
+    transform: translate(-2px, 0) rotate(-45deg);
+}
+
+@keyframes flipdown {
+    0% {
+        opacity: 0;
+        transform-origin: top center;
+        transform: rotateX(-90deg);
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    80% {
+        transform: rotateX(8deg);
+    }
+
+    83% {
+        transform: rotateX(6deg);
+    }
+
+    92% {
+        transform: rotateX(-3deg);
+    }
+
+    100% {
+        transform-origin: top center;
+        transform: rotateX(0deg);
+    }
+}
+
+/* -=- Keyframe CSS -=- */
+
+/****** Responsive CSS Start ******/
+
+@media only screen and (min-width: 1200px) {
+    /* Add style according to viewports size */
+}
+
+/****** Responsive CSS End ******/
