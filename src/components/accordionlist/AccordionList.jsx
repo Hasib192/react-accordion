@@ -1,13 +1,11 @@
-const AccordionList = ({ question, answer }) => {
+const AccordionList = ({ question, answer, index }) => {
   return (
-    <ul>
-      <li>
-        <input type="checkbox" defaultChecked="checked" />
-        <i />
-        <h2>{question}</h2>
-        <p>{answer}</p>
-      </li>
-    </ul>
+    <li className={`accordion-item-${index + 1}`}>
+      <input type="checkbox" defaultChecked="checked" />
+      <i />
+      <h2>{question}</h2>
+      <p>{answer}</p>
+    </li>
   );
 };
 
